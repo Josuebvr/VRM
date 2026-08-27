@@ -78,6 +78,17 @@ h1, h2, h3, .case-number { font-family: 'Archivo Black', sans-serif; text-transf
     overflow: hidden;
     margin-bottom: 100px;
     opacity: 1;
+    transform: scale(5); 
+    transform-origin: center center;
+}
+
+.reverse-zoom {
+    animation: pullBackCamera 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes pullBackCamera {
+    0% { transform: scale(5); }
+    100% { transform: scale(1); } /* Para exatamente onde está estruturado */
 }
 
 /* Placa da Agência Sobreposta */

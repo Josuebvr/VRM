@@ -5,12 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfólio VRM | Nossos Clientes</title>
 
-<!-- Importando Archivo Black e Work Sans do Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-<!-- Conectando o seu arquivo de Estilos (CSS) -->
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -50,17 +47,23 @@
     <!-- SITE PRINCIPAL (PORTFÓLIO) -->
     <div id="main-content">
         
-        <header class="site-header">
-            <h1>Nossos<br>Clientes</h1>
-            <span>Agência VRM</span>
-        </header>
+        <section id="hero-plattenbau" class="reveal">
+            <!-- O JS vai gerar as janelas automaticamente aqui dentro -->
+            <div class="plattenbau-grid" id="plattenbau-grid"></div>
+            
+            <!-- Placa da Agência Sobreposta (Estilo Modernista) -->
+            <div class="hero-overlay">
+                <h1>VRM</h1>
+                <p>Marketing & Estratégia</p>
+            </div>
+        </section>
 
-        <!-- CASE 01: LUBRIFIQUE (Azul) -->
+        <!-- CASE 01 -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-blue">
+            <div class="case-visual shape-square bg-blue reveal">
                 <img src="placeholder-logo.png" alt="Logo Lubrifique" class="client-logo">
             </div>
-            <div class="case-info">
+            <div class="case-info reveal">
                 <div class="case-number text-blue">01</div>
                 <h2>Lubrifique</h2>
                 <p>Breve descrição sobre o projeto da Lubrifique. Como a VRM ajudou a construir autoridade e resultados concretos de marketing para a marca.</p>
@@ -68,12 +71,12 @@
             </div>
         </article>
 
-        <!-- CASE 02: IBI (Azul) -->
+        <!-- CASE 02 -->
         <article class="case-card">
-            <div class="case-visual shape-circle bg-blue">
+            <div class="case-visual shape-circle bg-blue reveal">
                 <img src="placeholder-logo.png" alt="Logo IBI" class="client-logo">
             </div>
-            <div class="case-info">
+            <div class="case-info reveal">
                 <div class="case-number text-blue">02</div>
                 <h2>IBI</h2>
                 <p>Estratégia sólida e execução impecável. A IBI confiou na nossa visão para reposicionar sua comunicação no mercado.</p>
@@ -81,12 +84,12 @@
             </div>
         </article>
 
-        <!-- CASE 03: INDICA (Amarelo) -->
+        <!-- CASE 03 -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-yellow">
+            <div class="case-visual shape-square bg-yellow reveal">
                 <img src="placeholder-logo.png" alt="Logo Indica" class="client-logo">
             </div>
-            <div class="case-info">
+            <div class="case-info reveal">
                 <div class="case-number text-yellow">03</div>
                 <h2>Indica</h2>
                 <p>Campanhas arrojadas e de alto impacto visual. Para a Indica, saímos do óbvio e focamos em conversão real.</p>
@@ -94,12 +97,12 @@
             </div>
         </article>
 
-        <!-- CASE 04: DALE (Vermelho) -->
+        <!-- CASE 04 -->
         <article class="case-card">
-            <div class="case-visual shape-circle bg-red">
+            <div class="case-visual shape-circle bg-red reveal">
                 <img src="placeholder-logo.png" alt="Logo Dale" class="client-logo">
             </div>
-            <div class="case-info">
+            <div class="case-info reveal">
                 <div class="case-number text-red">04</div>
                 <h2>Dale</h2>
                 <p>Uma marca que respira energia precisava de um marketing à altura. Nosso trabalho com a Dale envolveu planejamento de ponta a ponta.</p>
@@ -107,12 +110,12 @@
             </div>
         </article>
 
-        <!-- CASE 05: NICK (Laranja) -->
+        <!-- CASE 05 -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-orange">
+            <div class="case-visual shape-square bg-orange reveal">
                 <img src="placeholder-logo.png" alt="Logo Nick" class="client-logo">
             </div>
-            <div class="case-info">
+            <div class="case-info reveal">
                 <div class="case-number text-orange">05</div>
                 <h2>Nick</h2>
                 <p>Design, estratégia e foco nos números. A Nick encerra nossa composição mostrando que criatividade e performance andam lado a lado.</p>
@@ -120,9 +123,21 @@
             </div>
         </article>
 
+        <footer class="site-footer reveal">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>VRM</h2>
+                    <p>Marketing & Estratégia</p>
+                </div>
+                <div class="footer-credit">
+                    <p>&copy; VRM. Todos os direitos reservados.</p>
+                    <p>Idealizado por <strong class="marca-pessoal">Josué Rios</strong></p>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- Conectando o seu arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,8 +4,22 @@ body { background-color: #F6F3EB; color: #141414; font-family: 'Work Sans', sans
 h1, h2, h3, .case-number { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; line-height: 1; }
 
 /* TELA DE ENTRADA */
-#intro-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #F6F3EB; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 1s ease; }
-#logo-wrapper { width: 100%; max-width: 800px; animation: netflixOutro 2s forwards cubic-bezier(0.5, 0, 0.1, 1); animation-delay: 3.2s; }
+#intro-container { 
+    position: fixed; 
+    top: 0; left: 0; width: 100vw; height: 100vh; 
+    background-color: #F6F3EB; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 9999; 
+    /* Sincroniza o tempo de sumir com o tempo exato do zoom (1.5s) */
+    transition: opacity 1.5s cubic-bezier(0.65, 0, 0.35, 1); 
+}
+#logo-wrapper {
+    width: 100%;
+    max-width: 800px;
+    transform-origin: center center;
+}
 @keyframes netflixOutro { 0% { opacity: 1; transform: scale(1); filter: blur(0); } 100% { opacity: 0; transform: scale(1.8); filter: blur(10px); display: none; } }
 
 /* Animações SVG */
@@ -29,30 +43,51 @@ h1, h2, h3, .case-number { font-family: 'Archivo Black', sans-serif; text-transf
 /* =========================================
    TELA INICIAL: MODERNISMO ABSTRATO
    ========================================= */
+   /* O giro e a expansão colossal */
+.expand-to-plattenbau {
+    animation: rotateThenZoom 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes rotateThenZoom {
+    0% { 
+        transform: scale(1) rotate(0deg); 
+    }
+    35% { 
+        transform: scale(1) rotate(-25deg); 
+    }
+    45% {
+        transform: scale(1) rotate(-25deg); 
+    }
+    100% { 
+        transform: scale(60) rotate(-25deg); /* Zoom ampliado para 60x para mergulhar DENTRO da letra */
+    }
+}
+
 #hero-plattenbau {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background: linear-gradient(-25deg,
+        background: linear-gradient(-25deg,
         #F6F3EB 0%, #F6F3EB 35%,       /* Concreto */
-        #205da1 35%, #205da1 45%,      /* Azul */
-        #e6a727 45%, #e6a727 55%,      /* Amarelo */
-        #e85c1c 55%, #e85c1c 65%,      /* Laranja */
-        #c62222 65%, #c62222 75%,      /* Vermelho */
+        #e85c1c 35%, #e85c1c 45%,      /* Azul */
+        #c62222 45%, #c62222 55%,      /* Amarelo */
+        #e6a727 55%, #e6a727 65%,      /* Laranja */
+        #205da1 65%, #205da1 75%,      /* Vermelho */
         #F6F3EB 75%, #F6F3EB 100%      /* Concreto */
     );
     overflow: hidden;
     margin-bottom: 100px;
+    opacity: 1;
 }
 
 /* Placa da Agência Sobreposta */
 .hero-overlay {
     position: absolute;
-    top: 40%; 
+    top: 41.80%; 
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #F6F3EB;
-    border: 10px solid #141414;
+    border: 5px solid #141414;
     padding: 30px 60px;
     text-align: center;
     z-index: 10;
@@ -69,7 +104,7 @@ h1, h2, h3, .case-number { font-family: 'Archivo Black', sans-serif; text-transf
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #e85c1c; 
+    color: #141414; 
     letter-spacing: 2px;
 }
 

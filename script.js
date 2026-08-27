@@ -1,47 +1,54 @@
 window.addEventListener('DOMContentLoaded', () => {
     const introContainer = document.getElementById('intro-container');
+    const logoWrapper = document.getElementById('logo-wrapper');
     const mainContent = document.getElementById('main-content');
+    const heroPlattenbau = document.getElementById('hero-plattenbau');
+    const textMask = document.getElementById('text-mask');
 
-    // 1. Controle da Tela de Abertura
+    // 1. Gera a grelha do Plattenbau dinamicamente
+    const plattenbauGrid = document.getElementById('plattenbau-grid');
+    if(plattenbauGrid) {
+        for(let i = 0; i < 50; i++) {
+            const panel = document.createElement('div');
+            panel.classList.add('panel');
+            plattenbauGrid.appendChild(panel);
+        }
+    }
+
+    // 2. Orquestração da Transição VRM -> Plattenbau
     setTimeout(() => {
-        introContainer.style.opacity = '0'; 
+        // A) Dispara a animação nas próprias letras (Gira -> Pausa -> Mergulho)
+        logoWrapper.classList.add('expand-to-plattenbau');
 
+        // B) Prepara o conteúdo principal por baixo
+        mainContent.style.display = 'block';
+
+        // C) Inicia o crossfade aos 1200ms, quando a câmera já está mergulhando DENTRO das letras coloridas
+        setTimeout(() => {
+            introContainer.style.opacity = '0';
+        }, 1200); 
+
+        // D) Limpa a intro da memória aos 2100ms
         setTimeout(() => {
             introContainer.style.display = 'none'; 
-            mainContent.style.display = 'block'; 
             document.body.style.overflow = 'auto'; 
             window.scrollTo(0, 0);
-
-            // Assim que o site aparecer, chamamos a função que liga o dinamismo do scroll
             iniciarAnimacoesDeScroll();
-        }, 1000); 
+        }, 2100); 
 
-    }, 5000); 
-
-    // 2. Lógica de Dinamismo (Scroll Reveal)
+    }, 3200);
+    // Lógica de Dinamismo (Scroll Reveal) continua igual...
     function iniciarAnimacoesDeScroll() {
         const elementosParaAnimar = document.querySelectorAll('.reveal');
-
-        // Configuração do observador: só dispara quando 15% do elemento estiver visível
-        const configuracao = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15 
-        };
-
+        const configuracao = { root: null, rootMargin: '0px', threshold: 0.15 };
         const observer = new IntersectionObserver((entradas, observador) => {
             entradas.forEach(entrada => {
-                // Se o elemento entrou na tela
                 if (entrada.isIntersecting) {
-                    entrada.target.classList.add('active'); // Adiciona a classe que faz surgir
-                    observador.unobserve(entrada.target); // Para de observar (anima só uma vez)
+                    entrada.target.classList.add('active'); 
+                    observador.unobserve(entrada.target); 
                 }
             });
         }, configuracao);
-
-        // Manda o observador vigiar todos os elementos com a classe .reveal
-        elementosParaAnimar.forEach(elemento => {
-            observer.observe(elemento);
-        });
+        elementosParaAnimar.forEach(elemento => observer.observe(elemento));
     }
 });

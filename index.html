@@ -2,26 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Metadados básicos e configurações de responsividade. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio VRM | Nossos Clientes</title>
+    <title>VRM</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;700&display=swap"
         rel="stylesheet" />
-    <!-- Tipografia externa e folha de estilos principal. -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- =========================================================
-         INTRODUÇÃO ANIMADA: logotipo formado por faixas coloridas.
-         ========================================================= -->
+    <!-- ====================
+         INTRODUÇÃO ANIMADA
+         ==================== -->
     <div id="intro-container">
         <div id="logo-wrapper">
-            <!-- Máscara SVG que recorta as faixas no formato da marca VRM. -->
             <svg viewBox="0 0 1600 600" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <clipPath id="text-mask">
@@ -53,105 +50,108 @@
         </div>
     </div>
 
-    <!-- =========================================================
-         SITE PRINCIPAL: hero, cases de clientes e rodapé.
-         ========================================================= -->
+    <!-- ================
+         SITE PRINCIPAL
+         ================ -->
     <div id="main-content">
-        <!-- Hero com fundo geométrico controlado pelo CSS e pelo JavaScript. -->
-        <section id="hero-plattenbau" class="reveal">
-            <!-- O JS vai gerar as janelas automaticamente aqui dentro -->
-            <div class="plattenbau-grid" id="plattenbau-grid"></div>
+        
 
-            <!-- Placa da Agência Sobreposta (Estilo Modernista) -->
+        <section id="hero-plattenbau" class="reveal">
+            <div class="plattenbau-grid" id="plattenbau-grid"></div>
             <div class="hero-overlay">
                 <h1>VRM</h1>
                 <p>Marketing & Estratégia</p>
             </div>
         </section>
 
-        <!-- CASE 01 -->
+        <div class="portfolio-edificio">
+            
+            <header class="site-header reveal">
+                <h1>Nossos Parceiros</h1>
+            </header>
+
+        <!-- LUBRIFIQUE -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-blue reveal">
-                <img src="placeholder-logo.png" alt="Logo Lubrifique" class="client-logo" />
+            <div class="case-visual reveal">
+                <div class="plattenbau-window">
+                    <img src="logo-lubrifique.png" alt="Logo Lubrifique" class="client-logo">
+                </div>
             </div>
             <div class="case-info reveal">
-                <div class="case-number text-blue">01</div>
-                <h2>Lubrifique</h2>
-                <p>
-                    Breve descrição sobre o projeto da Lubrifique. Como a VRM ajudou a
-                    construir autoridade e resultados concretos de marketing para a
-                    marca.
-                </p>
-                <a href="#" class="btn">Ver Detalhes</a>
+                <div class="info-block">
+                    <h2>Lubrifique</h2>
+                    <p>Especialistas em lubrificação industrial, filtragem de óleo e engenharia de manutenção preventiva. Com soluções de alta precisão que reduzem em até 80% as falhas em sistemas hidráulicos e motores, a Lubrifique alia máxima performance produtiva à sustentabilidade. A escolha certa para indústrias que precisam eliminar o desperdício, evitar paradas não programadas e reduzir drasticamente os custos operacionais.</p>
+                    <a href="https://www.lubrifique.com/" target="_blank" class="btn-plattenbau">Acessar o Site</a>
+                </div>
             </div>
         </article>
 
-        <!-- CASE 02 -->
+        <!-- IBI -->
         <article class="case-card">
-            <div class="case-visual shape-circle bg-blue reveal">
-                <img src="placeholder-logo.png" alt="Logo IBI" class="client-logo" />
+            <div class="case-visual reveal">
+                <div class="plattenbau-window">
+                    <img src="logo-ibi.png" alt="Logo IBI" class="client-logo">
+                </div>
             </div>
             <div class="case-info reveal">
-                <div class="case-number text-blue">02</div>
-                <h2>IBI</h2>
-                <p>
-                    Estratégia sólida e execução impecável. A IBI confiou na nossa visão
-                    para reposicionar sua comunicação no mercado.
-                </p>
-                <a href="#" class="btn">Ver Detalhes</a>
+                <div class="info-block">
+                    <h2>IBI</h2>
+                    <p>Estratégia sólida e execução impecável. A IBI confiou na nossa visão para reposicionar sua comunicação no mercado.</p>
+                    <a href="#" class="btn-plattenbau">Ver Detalhes</a>
+                </div>
             </div>
         </article>
 
-        <!-- CASE 03 -->
+        <!-- INDICA -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-yellow reveal">
-                <img src="placeholder-logo.png" alt="Logo Indica" class="client-logo" />
+            <div class="case-visual reveal">
+                <div class="plattenbau-window">
+                    <img src="logo-indica.png" alt="Logo Indica" class="client-logo">
+                </div>
             </div>
             <div class="case-info reveal">
-                <div class="case-number text-yellow">03</div>
-                <h2>Indica</h2>
-                <p>
-                    Campanhas arrojadas e de alto impacto visual. Para a Indica, saímos
-                    do óbvio e focamos em conversão real.
-                </p>
-                <a href="#" class="btn">Ver Detalhes</a>
+                <div class="info-block">
+                    <h2>Indica</h2>
+                    <p>Campanhas arrojadas e de alto impacto visual. Para a Indica, saímos do óbvio e focamos em conversão real.</p>
+                    <a href="#" class="btn-plattenbau">Ver Detalhes</a>
+                </div>
             </div>
         </article>
 
-        <!-- CASE 04 -->
+        <!-- DALE -->
         <article class="case-card">
-            <div class="case-visual shape-circle bg-red reveal">
-                <img src="placeholder-logo.png" alt="Logo Dale" class="client-logo" />
+            <div class="case-visual reveal">
+                <div class="plattenbau-window">
+                    <img src="logo-dale.png" alt="Logo Dale" class="client-logo">
+                </div>
             </div>
             <div class="case-info reveal">
-                <div class="case-number text-red">04</div>
-                <h2>Dale</h2>
-                <p>
-                    Uma marca que respira energia precisava de um marketing à altura.
-                    Nosso trabalho com a Dale envolveu planejamento de ponta a ponta.
-                </p>
-                <a href="#" class="btn">Ver Detalhes</a>
+                <div class="info-block">
+                    <h2>Dale</h2>
+                    <p>Uma marca que respira energia precisava de um marketing à altura. Nosso trabalho com a Dale envolveu planejamento de ponta a ponta.</p>
+                    <a href="#" class="btn-plattenbau">Ver Detalhes</a>
+                </div>
             </div>
         </article>
 
-        <!-- CASE 05 -->
+        <!-- NICK -->
         <article class="case-card">
-            <div class="case-visual shape-square bg-orange reveal">
-                <img src="placeholder-logo.png" alt="Logo Nick" class="client-logo" />
+            <div class="case-visual reveal">
+                <div class="plattenbau-window">
+                    <img src="VRM.png" alt="Logo Nick" class="client-logo">
+                </div>
             </div>
             <div class="case-info reveal">
-                <div class="case-number text-orange">05</div>
-                <h2>Nick</h2>
-                <p>
-                    Design, estratégia e foco nos números. A Nick encerra nossa
-                    composição mostrando que criatividade e performance andam lado a
-                    lado.
-                </p>
-                <a href="#" class="btn">Ver Detalhes</a>
+                <div class="info-block">
+                    <h2>Nick</h2>
+                    <p>Design, estratégia e foco nos números. A Nick encerra nossa composição mostrando que criatividade e performance andam lado a lado.</p>
+                    <a href="#" class="btn-plattenbau">Ver Detalhes</a>
+                </div>
             </div>
         </article>
 
-        <!-- Rodapé com identificação da agência e créditos. -->
+        </div>
+
         <footer class="site-footer reveal">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -161,14 +161,13 @@
                 <div class="footer-credit">
                     <p>&copy; VRM. Todos os direitos reservados.</p>
                     <p>
-                        Idealizado por <strong class="marca-pessoal">Josué Rios</strong>
+                        Idealizado por <class="marca-pessoal">Josué Rios
                     </p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- Comportamentos, animações e efeitos de rolagem da página. -->
     <script src="script.js"></script>
 </body>
 

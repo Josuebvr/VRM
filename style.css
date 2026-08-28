@@ -190,10 +190,8 @@ h3,
     45% {
         transform: scale(1) rotate(-25deg);
     }
-
-    100% {
-        transform: scale(12) rotate(-25deg);
-        /* Zoom ampliado para 60x para mergulhar DENTRO da letra */
+    100% { 
+        transform: scale(60) rotate(-25deg); /* Zoom ampliado para 60x para mergulhar DENTRO da letra */
     }
 }
 
@@ -230,15 +228,8 @@ h3,
 }
 
 @keyframes pullBackCamera {
-    0% {
-        transform: scale(10);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-
-    /* Para exatamente onde está estruturado */
+    0% { transform: scale(5); }
+    100% { transform: scale(1); } /* Para exatamente onde está estruturado */
 }
 
 /* Placa central da agência, posicionada sobre o hero. */
